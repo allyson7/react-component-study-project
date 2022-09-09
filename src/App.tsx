@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import { Button } from "./components/Button";
 import { MovieCard } from "./components/MovieCard";
 
 // import { SideBar } from './components/SideBar';
@@ -85,7 +84,7 @@ export function App() {
           ))}
         </div>s
       </nav> */}
-      <SideBar sidebarOnClick={handleClickButton} />
+      <SideBar />
 
       <div className="container">
         <Header title={selectedGenre.title} />

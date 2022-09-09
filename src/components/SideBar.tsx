@@ -10,10 +10,10 @@ interface GenreResponseProps {
 }
 
 type sidebarProps = {
-  sidebarOnClick: () => {};
+  sidebarOnClick: () => void;
 };
 
-export function SideBar({ sidebarOnClick }: sidebarProps) {
+export function SideBar() {
   // Complete aqui
   const [selectedGenreId, setSelectedGenreId] = useState(1);
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
@@ -43,7 +43,7 @@ export function SideBar({ sidebarOnClick }: sidebarProps) {
             key={String(genre.id)}
             title={genre.title}
             iconName={genre.name}
-            onClick={sidebarOnClick}
+            onClick={() => handleClickButton(genre.id)}
             selected={selectedGenreId === genre.id}
           />
         ))}
